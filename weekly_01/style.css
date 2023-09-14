@@ -11,6 +11,8 @@
     -> 브라우저의 font-size를 어떻게 가져와서 이에 대한 상대적인 값으로 두어야 할 지 모르겠습니다. rem을 사용하는 것인가요?
 */
 
+@import "reset.css"; /* 브라우저 기본 margin 없애기 위해서 */
+
 *{
     box-sizing : border-box;
 }
@@ -24,6 +26,11 @@ html{
     /* 1920px 이상이 되면 파란색 배경만 늘어나도록 이 class 배경 따로 설정 */
     width : 100%;
     background: var(--linkbrary-bg, #F0F6FF);
+}
+
+.bg_footer{
+    width : 100%;
+    background: var(--the-julge-black, #111322);
 }
 
 a :hover{
@@ -40,7 +47,7 @@ header{
     align-items: center;
     gap: 8px;
     align-self: stretch;
-
+    background: var(--linkbrary-bg, #F0F6FF);
 }
 
 header div{
@@ -302,14 +309,15 @@ header a{ /* login button */
 
 footer{
     display: flex;
+    width : 100%;
+    max-width : 1920px;
     height: 160px;
+    margin : 0 auto;
     padding: 32px 104px 64px 104px;
     justify-content: space-between;
     align-items: flex-start;
     flex-shrink: 0;
     align-self: stretch;
-
-    background: var(--the-julge-black, #111322);
 }
 
 footer a{
